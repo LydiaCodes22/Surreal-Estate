@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the NavBar matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Surreal Estate Logo"
+        class="logo-image"
+        src="logo.png"
+      />
+    </a>
+    <ul
+      class="navbar-list"
+    >
+      <li
+        class="navbar-item"
+      >
+        <a
+          href="/view-properties"
+        >
+          View Properties
+        </a>
+      </li>
+      <li
+        class="navbar-item"
+      >
+        <a
+          href="/add-properties"
+        >
+          Add a Property
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
