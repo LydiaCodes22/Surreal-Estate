@@ -1,3 +1,4 @@
+# Surreal-Estate
 # About This project
 This is a project I have made under the guidance of the Manchester Codes bootcamp. I am building a property search engine using React.
 
@@ -85,4 +86,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Surreal-Estate
+
