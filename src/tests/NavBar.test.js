@@ -30,7 +30,6 @@ describe("the NavBar", () => {
 
   it("has links to the right parts of the app", () => {
     render(<App />);
-    
     fireEvent.click(screen.getByText(/view properties/i));
     expect(
       screen.getByRole("heading", {

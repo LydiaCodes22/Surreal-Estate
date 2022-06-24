@@ -9,15 +9,146 @@ exports[`the add properties component matches the snapshot 1`] = `
       Add Properties
     </h1>
     <form>
-      <label>
-        Title:
+      <label
+        class="formLabel"
+      >
+        Property title
         <input
+          id="title"
           name="title"
+          placeholder="Property title"
+          required=""
           type="text"
+          value=""
         />
       </label>
+      <label
+        class="formLabel"
+      >
+        Property type
+        <select
+          id="type"
+          name="type"
+        >
+          <option
+            value="detached"
+          >
+            Detached
+          </option>
+          <option
+            value="semi-detached"
+          >
+            Semi-detached
+          </option>
+          <option
+            value="terrace"
+          >
+            terrace
+          </option>
+          <option
+            value="end of terrace"
+          >
+            End of terrace
+          </option>
+          <option
+            value="cottage"
+          >
+            Cottage
+          </option>
+          <option
+            value="bungalow"
+          >
+            Bungalow
+          </option>
+        </select>
+      </label>
+      <label
+        class="formLabel"
+      >
+        Bedrooms
+        <input
+          id="bedrooms"
+          name="bedrooms"
+          placeholder="Number of bedrooms"
+          required=""
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        class="formLabel"
+      >
+        Bathrooms
+        <input
+          id="bathrooms"
+          name="bathrooms"
+          placeholder="Number of bathrooms"
+          required=""
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        class="formLabel"
+      >
+        £
+        <input
+          id="price"
+          name="price"
+          placeholder="Price"
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        class="formLabel"
+      >
+        Location:
+        <select
+          id="city"
+          name="city"
+        >
+          <option
+            value="Manchester"
+          >
+            Manchester
+          </option>
+          <option
+            value="Leeds"
+          >
+            Leeds
+          </option>
+          <option
+            value="Sheffield"
+          >
+            Sheffield
+          </option>
+          <option
+            value="Liverpool"
+          >
+            Liverpool
+          </option>
+        </select>
+      </label>
+      <label
+        class="formLabel"
+      >
+        Email
+        <input
+          id="email"
+          name="email"
+          placeholder="Contact email"
+          required=""
+          type="email"
+          value=""
+        />
+      </label>
+      <button
+        type="submit"
+      >
+        Add
+      </button>
     </form>
-     
   </div>
 </DocumentFragment>
 `;

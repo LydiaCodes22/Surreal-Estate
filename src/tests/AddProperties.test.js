@@ -12,16 +12,12 @@ describe("the add properties component", () => {
     render(<AddProperties />);
     expect(screen.getByRole("heading", { name: /add/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /add/i })).toBeInTheDocument();
-    expect(screen.getByRole("textbox", { name: /title/i })).toBeInTheDocument();
-    expect(screen.getByRole("textbox", { name: /type/i })).toBeInTheDocument();
-    expect(
-      screen.getByRole("textbox", { name: /bedrooms/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("textbox", { name: /bathrooms/i })
-    ).toBeInTheDocument();
-    expect(screen.getByRole("textbox", { name: /price/i })).toBeInTheDocument();
-    expect(screen.getByRole("textbox", { name: /city/i })).toBeInTheDocument();
-    expect(screen.getByRole("textbox", { name: /email/i })).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/title/i)).toBeInTheDocument();
+    expect(screen.getByText(/type/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/bedrooms/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/bathrooms/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/price/i)).toBeInTheDocument();
+    expect(screen.getByText(/location/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument();
   });
 });
