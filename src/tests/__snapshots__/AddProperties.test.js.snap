@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the add properties component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="add-properties"
+  >
+    <h1>
+      Add Properties
+    </h1>
+    <form>
+      <label>
+        Title:
+        <input
+          name="title"
+          type="text"
+        />
+      </label>
+    </form>
+     
+  </div>
+</DocumentFragment>
+`;

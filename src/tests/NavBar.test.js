@@ -1,9 +1,8 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-// import userEvent from "@testing-library/user-event";
-// import { createMemoryHistory } from "history";
 import NavBar from "../components/NavBar";
+import App from "../components/App";
 
 describe("the NavBar", () => {
   it("matches the snapshot", () => {
@@ -29,19 +28,28 @@ describe("the NavBar", () => {
     expect(logoImage).toBeInTheDocument();
   });
 
-  // it("has links to the right parts of the app", () => {
-  //   const history = createMemoryHistory();
-  //   render(
-  //     <Router history={history}>
-  //       <NavBar />
-  //     </Router>
-  //   );
-  //   expect(history.location.pathname).toEqual("/");
-  //   userEvent.click(screen.getByText(/view properties/i));
-  //   expect(history.location.pathname).toEqual("/view-properties");
-  //   userEvent.click(screen.getByText(/add a property/i));
-  //   expect(history.location.pathname).toEqual("/add-properties");
-  //   userEvent.click(screen.getByAltText(/Surreal Estate Logo/i));
-  //   expect(history.location.pathname).toEqual("/");
-  // });
+  it("has links to the right parts of the app", () => {
+    render(<App />);
+    
+    fireEvent.click(screen.getByText(/view properties/i));
+    expect(
+      screen.getByRole("heading", {
+        name: /Properties/i,
+      })
+    ).toBeVisible();
+
+    fireEvent.click(screen.getByText(/add a property/i));
+    expect(
+      screen.getByRole("heading", {
+        name: /add/i,
+      })
+    ).toBeVisible();
+
+    fireEvent.click(screen.getByAltText(/Surreal Estate Logo/i));
+    expect(
+      screen.getByRole("heading", {
+        name: /home/i,
+      })
+    ).toBeVisible();
+  });
 });
