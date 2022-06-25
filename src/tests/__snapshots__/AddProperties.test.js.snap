@@ -8,6 +8,9 @@ exports[`the add properties component matches the snapshot 1`] = `
     <h1>
       Add Properties
     </h1>
+    <div>
+       
+    </div>
     <form>
       <label
         class="formLabel"
@@ -94,8 +97,10 @@ exports[`the add properties component matches the snapshot 1`] = `
         £
         <input
           id="price"
+          min="0.01"
           name="price"
           placeholder="Price"
+          step="0.01"
           type="number"
           value=""
         />

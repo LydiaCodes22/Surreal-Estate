@@ -1,8 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import axios from "axios";
 import React, { useState } from "react";
 import "../styles/AddProperties.css";
+import Alert from "./Alert";
 
 const AddProperties = () => {
+  const [statusCode, setStatusCode] = useState(0);
   const initialState = {
     fields: {
       title: "",
@@ -17,7 +20,11 @@ const AddProperties = () => {
   const [fields, setFields] = useState(initialState.fields);
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
+    axios
+      .post("https://surreal-api.herokuapp.com/api/v1/propertylisting", fields)
+      .then((response) => {
+        setStatusCode(response.status);
+      });
     setFields(initialState.fields);
   };
   const handleFieldChange = (event) => {
@@ -28,6 +35,7 @@ const AddProperties = () => {
   return (
     <div className="add-properties">
       <h1>Add Properties</h1>
+      <Alert statusCode={statusCode} />
       <form onSubmit={handleAddProperty}>
         <label className="formLabel">
           Property title
@@ -88,6 +96,8 @@ const AddProperties = () => {
             type="number"
             id="price"
             name="price"
+            min="0.01"
+            step="0.01"
             value={fields.price}
             onChange={handleFieldChange}
             placeholder="Price"
