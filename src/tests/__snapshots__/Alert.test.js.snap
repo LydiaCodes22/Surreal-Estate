@@ -2,8 +2,10 @@
 
 exports[`Alert matches the snapshot 1`] = `
 <DocumentFragment>
-  <div>
-     
+  <div
+    class="error-alert"
+  >
+     Not successful
   </div>
 </DocumentFragment>
 `;

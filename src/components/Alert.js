@@ -12,13 +12,10 @@ const Alert = ({ statusCode }) => {
   }
   if (statusCode === 404) {
     return (
-      <div className="server-error-alert">
-        {" "}
-        Server error. Please try again later.
-      </div>
+      <div className="error-alert"> Server error. Please try again later.</div>
     );
   }
-  return <div> </div>;
+  return <div className="error-alert">{statusCode} Not successful</div>;
 };
 
 Alert.propTypes = {

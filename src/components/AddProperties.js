@@ -24,6 +24,9 @@ const AddProperties = () => {
       .post("https://surreal-api.herokuapp.com/api/v1/propertylisting", fields)
       .then((response) => {
         setStatusCode(response.status);
+      })
+      .catch(() => {
+        setStatusCode(404);
       });
     setFields(initialState.fields);
   };
@@ -33,103 +36,118 @@ const AddProperties = () => {
   };
 
   return (
-    <div className="add-properties">
+    <div>
       <h1>Add Properties</h1>
-      <Alert statusCode={statusCode} />
-      <form onSubmit={handleAddProperty}>
-        <label className="formLabel">
+      {!!statusCode && <Alert statusCode={statusCode} />}
+      <form className="add-properties" onSubmit={handleAddProperty}>
+        <label htmlFor="title" className="form-label">
           Property title
-          <input
-            required
-            type="text"
-            id="title"
-            name="title"
-            value={fields.title}
-            onChange={handleFieldChange}
-            placeholder="Property title"
-          />
         </label>
-        <label className="formLabel">
-          Property type
-          <select
-            id="type"
-            name="type"
-            value={fields.type}
-            onChange={handleFieldChange}
-          >
-            <option value="detached">Detached</option>
-            <option value="semi-detached">Semi-detached</option>
-            <option value="terrace">terrace</option>
-            <option value="end of terrace">End of terrace</option>
-            <option value="cottage">Cottage</option>
-            <option value="bungalow">Bungalow</option>
-          </select>
-        </label>
+        <input
+          className="form-input"
+          required
+          type="text"
+          id="title"
+          name="title"
+          value={fields.title}
+          onChange={handleFieldChange}
+          placeholder="Property title"
+        />
 
-        <label className="formLabel">
+        <label htmlFor="type" className="form-label">
+          Property type
+        </label>
+        <select
+          className="form-input"
+          id="type"
+          name="type"
+          value={fields.type}
+          onChange={handleFieldChange}
+        >
+          <option value="detached">Detached</option>
+          <option value="semi-detached">Semi-detached</option>
+          <option value="terrace">terrace</option>
+          <option value="end of terrace">End of terrace</option>
+          <option value="cottage">Cottage</option>
+          <option value="bungalow">Bungalow</option>
+        </select>
+
+        <label htmlFor="bedrooms" className="form-label">
           Bedrooms
-          <input
-            required
-            type="number"
-            id="bedrooms"
-            name="bedrooms"
-            value={fields.bedrooms}
-            onChange={handleFieldChange}
-            placeholder="Number of bedrooms"
-          />
         </label>
-        <label className="formLabel">
+        <input
+          className="form-input"
+          required
+          type="number"
+          id="bedrooms"
+          name="bedrooms"
+          value={fields.bedrooms}
+          onChange={handleFieldChange}
+          placeholder="Number of bedrooms"
+        />
+
+        <label htmlFor="bathrooms" className="form-label">
           Bathrooms
-          <input
-            required
-            type="number"
-            id="bathrooms"
-            name="bathrooms"
-            value={fields.bathrooms}
-            onChange={handleFieldChange}
-            placeholder="Number of bathrooms"
-          />
         </label>
-        <label className="formLabel">
+        <input
+          className="form-input"
+          required
+          type="number"
+          id="bathrooms"
+          name="bathrooms"
+          value={fields.bathrooms}
+          onChange={handleFieldChange}
+          placeholder="Number of bathrooms"
+        />
+
+        <label htmlFor="price" className="form-label">
           £
-          <input
-            type="number"
-            id="price"
-            name="price"
-            min="0.01"
-            step="0.01"
-            value={fields.price}
-            onChange={handleFieldChange}
-            placeholder="Price"
-          />
         </label>
-        <label className="formLabel">
+        <input
+          className="form-input"
+          type="number"
+          id="price"
+          name="price"
+          min="0.01"
+          step="0.01"
+          value={fields.price}
+          onChange={handleFieldChange}
+          placeholder="Price"
+        />
+
+        <label htmlFor="city" className="form-label">
           Location:
-          <select
-            id="city"
-            name="city"
-            value={fields.city}
-            onChange={handleFieldChange}
-          >
-            <option value="Manchester">Manchester</option>
-            <option value="Leeds">Leeds</option>
-            <option value="Sheffield">Sheffield</option>
-            <option value="Liverpool">Liverpool</option>
-          </select>
         </label>
-        <label className="formLabel">
-          Email
-          <input
-            required
-            type="email"
-            id="email"
-            name="email"
-            value={fields.email}
-            onChange={handleFieldChange}
-            placeholder="Contact email"
-          />
+        <select
+          className="form-input"
+          id="city"
+          name="city"
+          value={fields.city}
+          onChange={handleFieldChange}
+        >
+          <option value="Manchester">Manchester</option>
+          <option value="Leeds">Leeds</option>
+          <option value="Sheffield">Sheffield</option>
+          <option value="Liverpool">Liverpool</option>
+        </select>
+
+        <label htmlFor="email" className="form-label">
+          Email{" "}
         </label>
-        <button type="submit">Add</button>
+        <input
+          className="form-input"
+          required
+          type="email"
+          id="email"
+          name="email"
+          value={fields.email}
+          onChange={handleFieldChange}
+          placeholder="Contact email"
+        />
+
+        <button className="form-input" type="submit">
+          Add
+        </button>
       </form>
     </div>
   );
