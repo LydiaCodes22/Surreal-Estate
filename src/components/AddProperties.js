@@ -9,11 +9,11 @@ const AddProperties = () => {
   const initialState = {
     fields: {
       title: "",
-      type: "",
+      type: "Detached",
       bedrooms: "",
       bathrooms: "",
       price: "",
-      city: "",
+      city: "Manchester",
       email: "",
     },
   };
