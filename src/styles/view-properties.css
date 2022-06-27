@@ -6,7 +6,7 @@ h1 {
     display: grid;
     width: 100%;
     justify-content: center;
-    grid-template-columns: 325px 325px 325px 325px ;
+    grid-template-columns: 250px 250px 250px 250px 250px;
 }    
 }
 
@@ -15,7 +15,7 @@ h1 {
         display: grid;
         width: 100%;
         justify-content: center;
-    grid-template-columns: 325px 325px 325px;
+    grid-template-columns: 250px 250px 250px ;
 }}
 
 @media (max-width: 990px) and (min-width: 650px) {
@@ -23,12 +23,12 @@ h1 {
         display: grid;
         width: 100%;
         justify-content: center;
-    grid-template-columns: 325px 325px;
+    grid-template-columns: 250px 250px;
 }}
 @media (max-width: 650px) {
     .view-properties {
         display: grid;
         width: 100%;
         justify-content: center;
-    grid-template-columns: 100% ;
+    grid-template-columns: 250px 2;
 }}

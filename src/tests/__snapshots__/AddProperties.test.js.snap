@@ -8,144 +8,161 @@ exports[`the add properties component matches the snapshot 1`] = `
     <h1>
       Add Properties
     </h1>
-    <form>
+    <form
+      class="add-properties-form"
+    >
       <label
-        class="formLabel"
+        class="form-label"
+        for="title"
       >
         Property title
-        <input
-          id="title"
-          name="title"
-          placeholder="Property title"
-          required=""
-          type="text"
-          value=""
-        />
       </label>
+      <input
+        class="form-input"
+        id="title"
+        name="title"
+        placeholder="Property title"
+        required=""
+        type="text"
+        value=""
+      />
       <label
-        class="formLabel"
+        class="form-label"
+        for="type"
       >
         Property type
-        <select
-          id="type"
-          name="type"
-        >
-          <option
-            value="detached"
-          >
-            Detached
-          </option>
-          <option
-            value="semi-detached"
-          >
-            Semi-detached
-          </option>
-          <option
-            value="terrace"
-          >
-            terrace
-          </option>
-          <option
-            value="end of terrace"
-          >
-            End of terrace
-          </option>
-          <option
-            value="cottage"
-          >
-            Cottage
-          </option>
-          <option
-            value="bungalow"
-          >
-            Bungalow
-          </option>
-        </select>
       </label>
+      <select
+        class="form-input"
+        id="type"
+        name="type"
+      >
+        <option
+          value="detached"
+        >
+          Detached
+        </option>
+        <option
+          value="semi-detached"
+        >
+          Semi-detached
+        </option>
+        <option
+          value="terrace"
+        >
+          terrace
+        </option>
+        <option
+          value="end of terrace"
+        >
+          End of terrace
+        </option>
+        <option
+          value="cottage"
+        >
+          Cottage
+        </option>
+        <option
+          value="bungalow"
+        >
+          Bungalow
+        </option>
+      </select>
       <label
-        class="formLabel"
+        class="form-label"
+        for="bedrooms"
       >
         Bedrooms
-        <input
-          id="bedrooms"
-          name="bedrooms"
-          placeholder="Number of bedrooms"
-          required=""
-          type="number"
-          value=""
-        />
       </label>
+      <input
+        class="form-input"
+        id="bedrooms"
+        name="bedrooms"
+        placeholder="Number of bedrooms"
+        required=""
+        type="number"
+        value=""
+      />
       <label
-        class="formLabel"
+        class="form-label"
+        for="bathrooms"
       >
         Bathrooms
-        <input
-          id="bathrooms"
-          name="bathrooms"
-          placeholder="Number of bathrooms"
-          required=""
-          type="number"
-          value=""
-        />
       </label>
+      <input
+        class="form-input"
+        id="bathrooms"
+        name="bathrooms"
+        placeholder="Number of bathrooms"
+        required=""
+        type="number"
+        value=""
+      />
       <label
-        class="formLabel"
+        class="form-label"
+        for="price"
       >
         £
-        <input
-          id="price"
-          min="0.01"
-          name="price"
-          placeholder="Price"
-          step="0.01"
-          type="number"
-          value=""
-        />
       </label>
+      <input
+        class="form-input"
+        id="price"
+        min="0.01"
+        name="price"
+        placeholder="Price"
+        step="0.01"
+        type="number"
+        value=""
+      />
       <label
-        class="formLabel"
+        class="form-label"
+        for="city"
       >
         Location:
-        <select
-          id="city"
-          name="city"
-        >
-          <option
-            value="Manchester"
-          >
-            Manchester
-          </option>
-          <option
-            value="Leeds"
-          >
-            Leeds
-          </option>
-          <option
-            value="Sheffield"
-          >
-            Sheffield
-          </option>
-          <option
-            value="Liverpool"
-          >
-            Liverpool
-          </option>
-        </select>
       </label>
-      <label
-        class="formLabel"
+      <select
+        class="form-input"
+        id="city"
+        name="city"
       >
-        Email
-        <input
-          id="email"
-          name="email"
-          placeholder="Contact email"
-          required=""
-          type="email"
-          value=""
-        />
+        <option
+          value="Manchester"
+        >
+          Manchester
+        </option>
+        <option
+          value="Leeds"
+        >
+          Leeds
+        </option>
+        <option
+          value="Sheffield"
+        >
+          Sheffield
+        </option>
+        <option
+          value="Liverpool"
+        >
+          Liverpool
+        </option>
+      </select>
+      <label
+        class="form-label"
+        for="email"
+      >
+        Email 
       </label>
+      <input
+        class="form-input"
+        id="email"
+        name="email"
+        placeholder="Contact email"
+        required=""
+        type="email"
+        value=""
+      />
       <button
+        class="form-input"
         type="submit"
       >
         Add

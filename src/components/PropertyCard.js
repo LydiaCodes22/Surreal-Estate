@@ -19,7 +19,13 @@ const PropertyCard = ({
       <div>{bedrooms}</div>
       <div>{price}</div>
       <div>{city}</div>
-      <div>{email}</div>
+      <div>
+        <a href={`mailto:${email}`}>
+          <button className="button" type="button">
+            Email
+          </button>
+        </a>
+      </div>
     </div>
   );
 };

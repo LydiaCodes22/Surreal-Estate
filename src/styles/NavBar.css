@@ -2,17 +2,15 @@
     border-bottom: 10px solid rgb(231, 225, 225);
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    
+    align-items: center;    
 }
+
 .logo-image {
     width: 200px;
     min-width: 15%
-    
 }
 
 .navbar-list {
-   
     margin: 0;
     padding: 0;
 }

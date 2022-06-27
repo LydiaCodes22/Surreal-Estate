@@ -36,10 +36,10 @@ const AddProperties = () => {
   };
 
   return (
-    <div>
+    <div className="add-properties">
       <h1>Add Properties</h1>
       {!!statusCode && <Alert statusCode={statusCode} />}
-      <form className="add-properties" onSubmit={handleAddProperty}>
+      <form className="add-properties-form" onSubmit={handleAddProperty}>
         <label htmlFor="title" className="form-label">
           Property title
         </label>

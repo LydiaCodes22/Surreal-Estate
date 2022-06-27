@@ -5,5 +5,77 @@ exports[`The view properties component matches the snapshot 1`] = `
   <h1>
     Properties
   </h1>
+  <div
+    class="view-properties"
+  >
+    <div
+      class="property-card"
+    >
+      <div>
+        10 bed castle
+      </div>
+      <div>
+        big cottage
+      </div>
+      <div>
+        3
+      </div>
+      <div>
+        7
+      </div>
+      <div>
+        1000000
+      </div>
+      <div>
+        Leeds
+      </div>
+      <div>
+        <a
+          href="mailto:vee.uye@test.com"
+        >
+          <button
+            class="button"
+            type="button"
+          >
+            Email
+          </button>
+        </a>
+      </div>
+    </div>
+    <div
+      class="property-card"
+    >
+      <div>
+        test
+      </div>
+      <div>
+        Detached
+      </div>
+      <div>
+        2
+      </div>
+      <div>
+        2
+      </div>
+      <div>
+        8
+      </div>
+      <div>
+        Sheffield
+      </div>
+      <div>
+        <a
+          href="mailto:test@test.com"
+        >
+          <button
+            class="button"
+            type="button"
+          >
+            Email
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;
